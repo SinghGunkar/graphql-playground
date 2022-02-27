@@ -6,11 +6,10 @@ const Query = {
 }
 
 const User = {
-    foodsEaten: user => {
-        const userFoodIds = user.foodsEaten
+    foodsEaten: ({ foodsEaten }) => {
         const userFoodsEaten = db.foods
             .list()
-            .filter(food => userFoodIds.includes(food.id))
+            .filter(food => foodsEaten.includes(food.id))
         return userFoodsEaten
     }
 }
