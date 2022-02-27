@@ -14,8 +14,10 @@ async function fetchMessage() {
             `
         })
     })
-    const responseBody = await response.json()
-    console.log(responseBody)
+    const { data } = await response.json()
+    return data
 }
 
-fetchMessage()
+fetchMessage().then(({ message }) => {
+    document.querySelector("h1").textContent = message
+})
