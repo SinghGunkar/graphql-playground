@@ -12,7 +12,7 @@ const Mutation = {
         root,
         { id, name, age, occupation, location, description, foodsEaten }
     ) => {
-        return db.users.create({
+        db.users.create({
             id,
             name,
             age,
@@ -21,6 +21,8 @@ const Mutation = {
             description,
             foodsEaten
         })
+
+        return db.users.get(id)
     }
 }
 

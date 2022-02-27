@@ -14,7 +14,7 @@ type Mutation {
         location: String!
         description: String!
         foodsEaten: [String]
-    ): ID
+    ): User
 }
 
 type User {
