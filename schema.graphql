@@ -1,12 +1,19 @@
 type Query {
     users: [User]
+    foods: [Food]
 }
 
 type User {
     id: ID!
+    name: String
+    age: Int
+    occupation: String
+    location: String
+    description: String
+    foodsEaten: [Food]
+}
+
+type Food {
+    id: ID!
     name: String!
-    age: Int!
-    occupation: String!
-    location: String!
-    description: String!
 }

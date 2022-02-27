@@ -5,7 +5,8 @@
         "age": "25",
         "occupation": "Pilot",
         "location": "Calgary",
-        "description": "Cool but needs to get his shit together"
+        "description": "Cool but needs to get his shit together",
+        "foodsEaten": ["123", "534", "782"]
     },
     {
         "id": "2",
@@ -13,7 +14,8 @@
         "age": "33",
         "occupation": "Cook",
         "location": "Edmonton",
-        "description": "Good at making chicken and dessert"
+        "description": "Good at making chicken and dessert",
+        "foodsEaten": ["534", "132", "782", "908"]
     },
     {
         "id": "3",
@@ -21,6 +23,7 @@
         "age": "47",
         "occupation": "Spy",
         "location": "Moscow",
-        "description": "Engaged in cold war espionage"
+        "description": "Engaged in cold war espionage",
+        "foodsEaten": ["782", "673"]
     }
 ]
