@@ -6,15 +6,17 @@ type Query {
 }
 
 type Mutation {
-    createUser(
-        id: ID!
-        name: String!
-        age: Int!
-        occupation: String!
-        location: String!
-        description: String!
-        foodsEaten: [String]
-    ): User
+    createUser(input: CreateNewUser): User
+}
+
+input CreateNewUser {
+    id: ID!
+    name: String!
+    age: Int!
+    occupation: String!
+    location: String!
+    description: String!
+    foodsEaten: [String]
 }
 
 type User {

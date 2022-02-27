@@ -49,5 +49,30 @@
       "132",
       "673"
     ]
+  },
+  {
+    "id": "6",
+    "name": "Naveel Khan2",
+    "age": 25,
+    "occupation": "Engineer",
+    "location": "Toronto",
+    "description": "Pretty good at electrical engineeering",
+    "foodsEaten": [
+      "123",
+      "673"
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Stan Li",
+    "age": 25,
+    "occupation": "Software Engineer",
+    "location": "Toronto",
+    "description": "Pretty good at creating projects",
+    "foodsEaten": [
+      "123",
+      "782",
+      "908"
+    ]
   }
 ]
