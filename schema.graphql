@@ -5,6 +5,18 @@ type Query {
     foods: [Food]
 }
 
+type Mutation {
+    createUser(
+        id: ID!
+        name: String!
+        age: Int!
+        occupation: String!
+        location: String!
+        description: String!
+        foodsEaten: [String]
+    ): ID
+}
+
 type User {
     id: ID!
     name: String

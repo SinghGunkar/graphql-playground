@@ -7,6 +7,23 @@ const Query = {
     foods: () => db.foods.list()
 }
 
+const Mutation = {
+    createUser: (
+        root,
+        { id, name, age, occupation, location, description, foodsEaten }
+    ) => {
+        return db.users.create({
+            id,
+            name,
+            age,
+            occupation,
+            location,
+            description,
+            foodsEaten
+        })
+    }
+}
+
 const User = {
     foodsEaten: ({ foodsEaten }) => {
         const userFoodsEaten = db.foods
@@ -16,4 +33,4 @@ const User = {
     }
 }
 
-module.exports = { Query, User }
+module.exports = { Query, User, Mutation }

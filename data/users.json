@@ -1,29 +1,53 @@
 [
-    {
-        "id": "1",
-        "name": "Gunkar Singh",
-        "age": "25",
-        "occupation": "Pilot",
-        "location": "Calgary",
-        "description": "Cool but needs to get his shit together",
-        "foodsEaten": ["123", "534", "782"]
-    },
-    {
-        "id": "2",
-        "name": "Kate Cloudy",
-        "age": "33",
-        "occupation": "Cook",
-        "location": "Edmonton",
-        "description": "Good at making chicken and dessert",
-        "foodsEaten": ["534", "132", "782", "908"]
-    },
-    {
-        "id": "3",
-        "name": "John Lennard",
-        "age": "47",
-        "occupation": "Spy",
-        "location": "Moscow",
-        "description": "Engaged in cold war espionage",
-        "foodsEaten": ["782", "673"]
-    }
+  {
+    "id": "1",
+    "name": "Gunkar Singh",
+    "age": "25",
+    "occupation": "Pilot",
+    "location": "Calgary",
+    "description": "Cool but needs to get his shit together",
+    "foodsEaten": [
+      "123",
+      "534",
+      "782"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Kate Cloudy",
+    "age": "33",
+    "occupation": "Cook",
+    "location": "Edmonton",
+    "description": "Good at making chicken and dessert",
+    "foodsEaten": [
+      "534",
+      "132",
+      "782",
+      "908"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "John Lennard",
+    "age": "47",
+    "occupation": "Spy",
+    "location": "Moscow",
+    "description": "Engaged in cold war espionage",
+    "foodsEaten": [
+      "782",
+      "673"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Messi Links",
+    "age": 45,
+    "occupation": "NBA player",
+    "location": "New York",
+    "description": "Pretty good as a point guard",
+    "foodsEaten": [
+      "132",
+      "673"
+    ]
+  }
 ]
