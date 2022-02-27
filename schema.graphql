@@ -1,3 +1,12 @@
 type Query {
-    message: String
+    users: [User]
+}
+
+type User {
+    id: ID!
+    name: String!
+    age: Int!
+    occupation: String!
+    location: String!
+    description: String!
 }

@@ -1,5 +1,7 @@
+const db = require("./db")
+
 const Query = {
-    message: () => "Hello there"
+    users: () => db.friends.list()
 }
 
 module.exports = { Query }
