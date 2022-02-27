@@ -10,7 +10,7 @@ const schemaDef = gql`
 // resolves the value of the greeting field (implementation)
 const resolvers = {
     Query: {
-        message: () => "Hello Graphql world!"
+        message: () => "Hello Graphql world!!"
     }
 }
 
