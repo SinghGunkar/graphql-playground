@@ -1,21 +1,36 @@
-const { gql, ApolloServer } = require("apollo-server")
+const bodyParser = require("body-parser")
+const cors = require("cors")
+const express = require("express")
+const expressJwt = require("express-jwt")
+const jwt = require("jsonwebtoken")
 
-// interface
-const schemaDef = gql`
-    type Query {
-        message: String
+const port = 9000
+const jwtSecret = Buffer.from("Zn8Q5tyZ/G1MHltc4F/gTkVJMlrbKiZt", "base64")
+
+const app = express()
+app.use(
+    cors(),
+    bodyParser.json(),
+    expressJwt({
+        secret: jwtSecret,
+        credentialsRequired: false,
+        algorithms: ["RS256"]
+    })
+)
+
+app.post("/login", (req, res) => {
+    const { email, password } = req.body
+    const user = db.users.list().find(user => user.email === email)
+    if (!(user && user.password === password)) {
+        res.sendStatus(401)
+        return
     }
-`
+    const token = jwt.sign({ sub: user.id }, jwtSecret)
+    res.send({ token })
+})
 
-// resolves the value of the greeting field (implementation)
-const resolvers = {
-    Query: {
-        message: () => "Hello Graphql world!!"
-    }
-}
+app.get("/info", (req, res) => {
+    res.send({ data: "send some information" })
+})
 
-// set up server
-const server = new ApolloServer({ typeDefs: schemaDef, resolvers: resolvers })
-server
-    .listen({ port: 9000 })
-    .then(({ port }) => console.log(`Server running on ${port}`))
+app.listen(port, () => console.info(`Server started on port ${port}`))
