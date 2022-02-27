@@ -14,6 +14,7 @@ const resolvers = {
     }
 }
 
+// set up server
 const server = new ApolloServer({ typeDefs: schemaDef, resolvers: resolvers })
 server
     .listen({ port: 9000 })
