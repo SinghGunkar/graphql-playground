@@ -3,6 +3,7 @@ const db = require("./db")
 const Query = {
     user: (root, args) => db.users.get(args.id),
     users: () => db.users.list(),
+    food: (root, args) => db.foods.get(args.id),
     foods: () => db.foods.list()
 }
 
