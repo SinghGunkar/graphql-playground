@@ -8,7 +8,8 @@ const Query = {
 }
 
 const Mutation = {
-    createUser: (root, { input }) => {
+    createUser: (root, { input }, context) => {
+        console.log(context)
         db.users.create(input)
         return db.users.get(input.id)
     }
